@@ -3,7 +3,6 @@ import random
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Dense, Flatten
-#Load Dataset
 X_train = np.loadtxt('input.csv', delimiter = ',')
 Y_train = np.loadtxt('labels.csv', delimiter = ',')
 
@@ -21,10 +20,6 @@ print("Shape of X_train: ", X_train.shape)
 print("Shape of Y_train: ", Y_train.shape)
 print("Shape of X_test: ", X_test.shape)
 print("Shape of Y_test: ", Y_test.shape)
-##Shape of X_train:  (2000, 100, 100, 3)
-##Shape of Y_train:  (2000, 1)
-##Shape of X_test:  (400, 100, 100, 3)
-##Shape of Y_test:  (400, 1)
 idx = random.randint(0, len(X_train))
 plt.imshow(X_train[idx, :])
 plt.show()
